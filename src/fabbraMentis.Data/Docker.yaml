@@ -1,0 +1,21 @@
+﻿version: '3.8'
+
+services:
+  sqlserver-db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver-db
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: FabbraMentis
+      ACCEPT_EULA: "Y"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+    networks:
+      - progetto_net
+
+networks:
+  progetto_net:
+
+volumes:
+  sqlserver_data:
