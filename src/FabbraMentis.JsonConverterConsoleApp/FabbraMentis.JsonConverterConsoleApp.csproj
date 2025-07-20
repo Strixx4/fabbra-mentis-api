@@ -4,4 +4,8 @@
         <OutputType>Exe</OutputType>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\FabbraMentis.JsonConverter.Object\FabbraMentis.JsonConverter.Object.csproj" />
+    </ItemGroup>
+
 </Project>
