@@ -1,0 +1,9 @@
+﻿<Project>
+    <PropertyGroup>
+        <ManagePackageVersionCentrally>true</ManagePackageVersionCentrally>
+    </PropertyGroup>
+    <!-- 3Rd Dependencies -->
+    <ItemGroup>
+        <PackageVersion Include="System.Linq.Dynamic.Core" Version="1.6.4" />
+    </ItemGroup>
+</Project>

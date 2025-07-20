@@ -9,6 +9,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JsonConverter", "JsonConver
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FabbraMentis.JsonConverter.Object", "src\FabbraMentis.JsonConverter.Object\FabbraMentis.JsonConverter.Object.csproj", "{545E112E-39E1-4D2F-9DA1-E8BA6C3C76D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FabbraMentis.JsonConverterConsoleApp", "src\FabbraMentis.JsonConverterConsoleApp\FabbraMentis.JsonConverterConsoleApp.csproj", "{153E5B46-306E-4234-91E6-EE051F3D21F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Solution Item", ".Solution Item", "{2BF1145A-9A86-4A6E-A452-F84C9504B602}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,8 +35,13 @@ Global
 		{545E112E-39E1-4D2F-9DA1-E8BA6C3C76D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{545E112E-39E1-4D2F-9DA1-E8BA6C3C76D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{545E112E-39E1-4D2F-9DA1-E8BA6C3C76D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{153E5B46-306E-4234-91E6-EE051F3D21F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{153E5B46-306E-4234-91E6-EE051F3D21F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{153E5B46-306E-4234-91E6-EE051F3D21F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{153E5B46-306E-4234-91E6-EE051F3D21F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{545E112E-39E1-4D2F-9DA1-E8BA6C3C76D6} = {EBFEA048-DB2C-41C3-8E72-52D446D5016A}
+		{153E5B46-306E-4234-91E6-EE051F3D21F0} = {EBFEA048-DB2C-41C3-8E72-52D446D5016A}
 	EndGlobalSection
 EndGlobal
