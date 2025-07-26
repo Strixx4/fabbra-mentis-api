@@ -52,7 +52,7 @@ try
 }
 catch (Exception e)
 {
-    Logger.ErrorLog(e.Message, e);
+    Logger.ErrorLog("Deserialization error", e);
 }
 
 Logger.LogEndProject("ConsoleApp");
