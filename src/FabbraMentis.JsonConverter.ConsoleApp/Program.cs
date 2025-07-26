@@ -39,6 +39,16 @@ try
     Logger.Log($"Deserialized {actions?.Action.Count} Base items");
 
     Logger.LogEndOperation("Actions deserialization");
+
+    // Conditions and Diseases
+    Logger.LogStartOperation("Conditions and Diseases deserialization");
+
+    json = File.ReadAllText(@"C:\Users\andre\Repo\fabbra-mentis-api\src\FabbraMentis.JsonConverter.ConsoleApp\json\conditions-diseases.json");
+    var cd = JsonConvert.DeserializeObject<ConditionsDiseasesRoot>(json);
+    Logger.Log($"Conditions and Diseases deserialized successfully: {cd is not null}");
+    Logger.Log($"Deserialized {cd?.ConditionFluff.Count} Base items");
+
+    Logger.LogEndOperation("Conditions and Diseases deserialization");
 }
 catch (Exception e)
 {
