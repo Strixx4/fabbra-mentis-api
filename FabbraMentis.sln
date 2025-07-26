@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JsonConverter", "JsonConver
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FabbraMentis.JsonConverter.Object", "src\FabbraMentis.JsonConverter.Object\FabbraMentis.JsonConverter.Object.csproj", "{545E112E-39E1-4D2F-9DA1-E8BA6C3C76D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FabbraMentis.JsonConverterConsoleApp", "src\FabbraMentis.JsonConverterConsoleApp\FabbraMentis.JsonConverterConsoleApp.csproj", "{153E5B46-306E-4234-91E6-EE051F3D21F0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FabbraMentis.JsonConverter.ConsoleApp", "src\FabbraMentis.JsonConverter.ConsoleApp\FabbraMentis.JsonConverter.ConsoleApp.csproj", "{153E5B46-306E-4234-91E6-EE051F3D21F0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Solution Item", ".Solution Item", "{2BF1145A-9A86-4A6E-A452-F84C9504B602}"
 	ProjectSection(SolutionItems) = preProject
