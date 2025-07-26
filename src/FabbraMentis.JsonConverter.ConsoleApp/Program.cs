@@ -1,51 +1,38 @@
-﻿using FabbraMentis.JsonConverter.Object;
+﻿using Common.Logger;
+
+using FabbraMentis.JsonConverter.Object;
 
 using Newtonsoft.Json;
 
-Console.ForegroundColor = ConsoleColor.Cyan;
-Console.WriteLine("Starting");
-Console.ForegroundColor = ConsoleColor.White;
+Logger.LogStartProject("FabbraMentis.JsonConverter.ConsoleApp");
 
 try
 {
     // Item
-    Console.ForegroundColor = ConsoleColor.Green;
-    Console.WriteLine("Start Items");
-    Console.ForegroundColor = ConsoleColor.White;
+    Logger.LogStartOperation("Item deserialization");
 
     var json = File.ReadAllText(@"C:\Users\andre\Repo\fabbra-mentis-api\src\FabbraMentis.JsonConverter.ConsoleApp\json\items-base.json");
     var items = JsonConvert.DeserializeObject<ItemPropertyRoot>(json);
 
-    Console.WriteLine($"Items deserialized successfully: {items is not null}");
-    Console.WriteLine($"Deserialized {items?.Baseitem.Count} Base items");
-    Console.ForegroundColor = ConsoleColor.Green;
-    Console.WriteLine("End Items");
-    Console.ForegroundColor = ConsoleColor.White;
+    Logger.Log($"Items deserialized successfully: {items is not null}");
+    Logger.Log($"Deserialized {items?.Baseitem.Count} Base items");
+
+    Logger.LogEndOperation("Item deserialization");
+
     // Races
-    Console.ForegroundColor = ConsoleColor.Green;
-    Console.WriteLine("Start Races");
-    Console.ForegroundColor = ConsoleColor.White;
+    Logger.LogStartOperation("Races deserialization");
 
     json = File.ReadAllText(@"C:\Users\andre\Repo\fabbra-mentis-api\src\FabbraMentis.JsonConverter.ConsoleApp\json\races.json");
     var races = JsonConvert.DeserializeObject<RacesRoot>(json);
 
-    Console.WriteLine($"Races deserialized successfully: {races is not null}");
-    Console.WriteLine($"Deserialized {races?.Race.Count} Base items");
-    Console.ForegroundColor = ConsoleColor.Green;
-    Console.WriteLine("End Races");
-    Console.ForegroundColor = ConsoleColor.White;
+    Logger.Log($"Races deserialized successfully: {races is not null}");
+    Logger.Log($"Deserialized {races?.Race.Count} Base items");
+
+    Logger.LogEndOperation("Races deserialization");
 }
 catch (Exception e)
 {
-    Console.ForegroundColor = ConsoleColor.Red;
-    Console.WriteLine("Message");
-    Console.ForegroundColor = ConsoleColor.White;
-    Console.WriteLine(e.Message);
-    Console.ForegroundColor = ConsoleColor.Red;
-    Console.WriteLine("Stack Trace");
-    Console.ForegroundColor = ConsoleColor.White;
-    Console.WriteLine(e.StackTrace);
+    Logger.ErrorLog(e.Message, e);
 }
 
-Console.ForegroundColor = ConsoleColor.Cyan;
-Console.WriteLine("Ending");
+Logger.LogEndProject("FabbraMentis.JsonConverter.ConsoleApp");
