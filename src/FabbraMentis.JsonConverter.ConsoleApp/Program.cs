@@ -4,7 +4,7 @@ using FabbraMentis.JsonConverter.Object;
 
 using Newtonsoft.Json;
 
-Logger.LogStartProject("FabbraMentis.JsonConverter.ConsoleApp");
+Logger.LogStartProject("ConsoleApp");
 
 try
 {
@@ -29,10 +29,20 @@ try
     Logger.Log($"Deserialized {races?.Race.Count} Base items");
 
     Logger.LogEndOperation("Races deserialization");
+
+    // Actions
+    Logger.LogStartOperation("Actions deserialization");
+
+    json = File.ReadAllText(@"C:\Users\andre\Repo\fabbra-mentis-api\src\FabbraMentis.JsonConverter.ConsoleApp\json\actions.json");
+    var actions = JsonConvert.DeserializeObject<Actions>(json);
+    Logger.Log($"Actions deserialized successfully: {actions is not null}");
+    Logger.Log($"Deserialized {actions?.Action.Count} Base items");
+
+    Logger.LogEndOperation("Actions deserialization");
 }
 catch (Exception e)
 {
     Logger.ErrorLog(e.Message, e);
 }
 
-Logger.LogEndProject("FabbraMentis.JsonConverter.ConsoleApp");
+Logger.LogEndProject("ConsoleApp");
