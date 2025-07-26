@@ -14,24 +14,6 @@ public class ConditionFluff
     public List<Image> Images { get; set; } = [];
 }
 
-public class Href
-{
-    [JsonProperty("type")]
-    public string Type { get; set; } = null!;
-
-    [JsonProperty("path")]
-    public string Path { get; set; } = null!;
-}
-
-public class Image
-{
-    [JsonProperty("type")]
-    public string Type { get; set; } = null!;
-
-    [JsonProperty("href")]
-    public Href Href { get; set; } = null!;
-}
-
 public class ConditionsDiseasesRoot
 {
     [JsonProperty("conditionFluff")]
