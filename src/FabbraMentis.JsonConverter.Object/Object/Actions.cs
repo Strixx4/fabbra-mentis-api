@@ -38,7 +38,7 @@ public class Action
     public bool? FreeRules2024 { get; set; }
 }
 
-public class Actions
+public class ActionsRoot
 {
     [JsonProperty("action")]
     public List<Action> Action { get; set; } = [];

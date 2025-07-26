@@ -34,7 +34,7 @@ try
     Logger.LogStartOperation("Actions deserialization");
 
     json = File.ReadAllText(@"C:\Users\andre\Repo\fabbra-mentis-api\src\FabbraMentis.JsonConverter.ConsoleApp\json\actions.json");
-    var actions = JsonConvert.DeserializeObject<Actions>(json);
+    var actions = JsonConvert.DeserializeObject<ActionsRoot>(json);
     Logger.Log($"Actions deserialized successfully: {actions is not null}");
     Logger.Log($"Deserialized {actions?.Action.Count} Base items");
 
