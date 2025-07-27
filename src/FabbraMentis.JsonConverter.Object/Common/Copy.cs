@@ -10,7 +10,7 @@ public class Copy
     [JsonProperty("source")]
     public string Source { get; set; } = string.Empty;
 
-    // Used for Races
+    // Used for Races, Backgrounds
     [JsonProperty("_mod")]
     public Mod? Mod { get; set; }
 }
@@ -27,10 +27,10 @@ public class Entries
     public string Mode { get; set; } = string.Empty;
 
     [JsonProperty("replace")]
-    public string Replace { get; set; } = string.Empty;
+    public object Replace { get; set; } = null!;
 
     [JsonProperty("items")]
-    public Items Items { get; set; } = null!;
+    public object Items { get; set; } = null!;
 
     [JsonProperty("names")]
     public string Names { get; set; } = string.Empty;

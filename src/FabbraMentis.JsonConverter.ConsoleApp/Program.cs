@@ -55,7 +55,7 @@ try
     var bg = JsonConvert.DeserializeObject<BackgroundsRoot>(json);
 
     Logger.Log($"Backgrounds deserialized successfully: {bg is not null}");
-    Logger.Log($"Deserialized {bg?.BackgroundFluff.Count} Base items");
+    Logger.Log($"Deserialized {bg?.Background.Count} Base items");
     Logger.LogEndOperation("Backgrounds deserialization");
 }
 catch (Exception e)

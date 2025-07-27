@@ -14,30 +14,6 @@ public class _3
     public Daily Daily { get; set; } = new();
 }
 
-public class Ability
-{
-    [JsonProperty("dex")]
-    public int? Dex { get; set; }
-
-    [JsonProperty("wis")]
-    public int? Wis { get; set; }
-
-    [JsonProperty("cha")]
-    public int? Cha { get; set; }
-
-    [JsonProperty("choose")]
-    public Choose Choose { get; set; } = new();
-
-    [JsonProperty("str")]
-    public int? Str { get; set; }
-
-    [JsonProperty("int")]
-    public int? Int { get; set; }
-
-    [JsonProperty("con")]
-    public int? Con { get; set; }
-}
-
 public class Abstract
 {
     [JsonProperty("name")]
@@ -48,30 +24,6 @@ public class Abstract
 
     [JsonProperty("_mod")]
     public Mod Mod { get; set; } = null!;
-}
-
-public class AdditionalSource
-{
-    [JsonProperty("source")]
-    public string Source { get; set; } = null!;
-
-    [JsonProperty("page")]
-    public int? Page { get; set; }
-}
-
-public class AdditionalSpell
-{
-    [JsonProperty("innate")]
-    public Innate Innate { get; set; } = null!;
-
-    [JsonProperty("ability")]
-    public object Ability { get; set; } = null!;
-
-    [JsonProperty("known")]
-    public Known Known { get; set; } = null!;
-
-    [JsonProperty("expanded")]
-    public Expanded Expanded { get; set; } = null!;
 }
 
 public class Age
@@ -92,46 +44,10 @@ public class ArmorProficiency
     public bool? Medium { get; set; }
 }
 
-public class Choose
-{
-    [JsonProperty("from")]
-    public List<string> From { get; set; } = null!;
-
-    [JsonProperty("count")]
-    public int? Count { get; set; }
-
-    [JsonProperty("amount")]
-    public int? Amount { get; set; }
-}
-
 public class Daily
 {
     [JsonProperty("1")]
     public List<string> _1 { get; set; } = null!;
-}
-
-public class Expanded
-{
-    [JsonProperty("s1")]
-    public List<string> S1 { get; set; } = null!;
-
-    [JsonProperty("s2")]
-    public List<string> S2 { get; set; } = null!;
-
-    [JsonProperty("s3")]
-    public List<string> S3 { get; set; } = null!;
-
-    [JsonProperty("s4")]
-    public List<string> S4 { get; set; } = null!;
-
-    [JsonProperty("s5")]
-    public List<string> S5 { get; set; } = null!;
-}
-
-public class Feat
-{
-    [JsonProperty("any")]
-    public int? Any { get; set; }
 }
 
 public class HeightAndWeight
@@ -174,54 +90,6 @@ public class Known
 {
     [JsonProperty("1")]
     public object _1 { get; set; } = null!;
-}
-
-public class LanguageProficiency
-{
-    [JsonProperty("celestial")]
-    public bool? Celestial;
-
-    [JsonProperty("auran")]
-    public bool? Auran { get; set; }
-
-    [JsonProperty("common")]
-    public bool? Common { get; set; }
-
-    [JsonProperty("other")]
-    public bool? Other { get; set; }
-
-    [JsonProperty("anyStandard")]
-    public int? AnyStandard { get; set; }
-
-    [JsonProperty("goblin")]
-    public bool? Goblin { get; set; }
-
-    [JsonProperty("sylvan")]
-    public bool? Sylvan { get; set; }
-
-    [JsonProperty("draconic")]
-    public bool? Draconic { get; set; }
-
-    [JsonProperty("dwarvish")]
-    public bool? Dwarvish { get; set; }
-
-    [JsonProperty("elvish")]
-    public bool? Elvish { get; set; }
-
-    [JsonProperty("giant")]
-    public bool? Giant { get; set; }
-
-    [JsonProperty("primordial")]
-    public bool? Primordial { get; set; }
-
-    [JsonProperty("undercommon")]
-    public bool? Undercommon { get; set; }
-
-    [JsonProperty("aquan")]
-    public bool? Aquan { get; set; }
-
-    [JsonProperty("gnomish")]
-    public bool? Gnomish { get; set; }
 }
 
 public class OtherSource
@@ -383,33 +251,6 @@ public class SizeEntry
     public List<string> Entries { get; set; } = [];
 }
 
-public class SkillProficiency
-{
-    [JsonProperty("intimidation")]
-    public bool? Intimidation { get; set; }
-
-    [JsonProperty("perception")]
-    public bool? Perception { get; set; }
-
-    [JsonProperty("stealth")]
-    public bool? Stealth { get; set; }
-
-    [JsonProperty("choose")]
-    public Choose Choose { get; set; } = null!;
-
-    [JsonProperty("any")]
-    public int? Any { get; set; }
-
-    [JsonProperty("animal handling")]
-    public bool? AnimalHandling { get; set; }
-}
-
-public class SkillToolLanguageProficiency
-{
-    [JsonProperty("choose")]
-    public List<Choose> Choose { get; set; } = [];
-}
-
 public class SoundClip
 {
     [JsonProperty("type")]
@@ -507,21 +348,6 @@ public class Subrace
 
     [JsonProperty("age")]
     public Age Age { get; set; } = null!;
-}
-
-public class ToolProficiency
-{
-    [JsonProperty("any")]
-    public int? Any { get; set; }
-
-    [JsonProperty("choose")]
-    public Choose Choose { get; set; } = null!;
-
-    [JsonProperty("anyArtisansTool")]
-    public int? AnyArtisansTool { get; set; }
-
-    [JsonProperty("tinker's tools")]
-    public bool? TinkerSTools { get; set; }
 }
 
 public class Variables
