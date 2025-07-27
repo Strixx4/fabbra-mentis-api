@@ -45,7 +45,7 @@ try
     var cd = JsonConvert.DeserializeObject<ConditionsDiseasesRoot>(json);
 
     Logger.Log($"Conditions and Diseases deserialized successfully: {cd is not null}");
-    Logger.Log($"Deserialized {cd?.ConditionFluff.Count} Base items");
+    Logger.Log($"Deserialized {cd?.Condition.Count} Base items");
     Logger.LogEndOperation("Conditions and Diseases deserialization");
 
     // Backgrounds

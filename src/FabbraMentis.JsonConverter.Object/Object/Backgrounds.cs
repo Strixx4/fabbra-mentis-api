@@ -68,7 +68,7 @@ public class Background
     public List<Ability> Ability { get; set; } = [];
 
     [JsonProperty("feats")]
-    public List<Feat> Feats { get; set; }
+    public List<Feat> Feats { get; set; } = [];
 
     [JsonProperty("toolProficiencies")]
     public List<ToolProficiency> ToolProficiencies { get; set; } = [];
@@ -113,7 +113,7 @@ public class Class
 public class D
 {
     [JsonProperty("special")]
-    public string Special { get; set; }
+    public string Special { get; set; } = string.Empty;
 }
 
 public class FromFeature
@@ -128,53 +128,53 @@ public class Level
     public int? LevelEntry { get; set; }
 
     [JsonProperty("class")]
-    public Class Class { get; set; }
+    public Class Class { get; set; } = null!;
 }
 
 public class Prerequisite
 {
     [JsonProperty("level")]
-    public Level Level { get; set; }
+    public Level Level { get; set; } = null!;
 }
 
 public class BackgroundsRoot
 {
     [JsonProperty("_meta")]
-    public Meta Meta { get; set; }
+    public Meta Meta { get; set; } = null!;
 
     [JsonProperty("background")]
-    public List<Background> Background { get; set; }
+    public List<Background> Background { get; set; } = [];
 }
 
 public class StartingEquipment
 {
     [JsonProperty("_")]
-    public List<object> _List { get; set; }
+    public List<object> _List { get; set; } = [];
 
     [JsonProperty("a")]
-    public List<object> AList { get; set; }
+    public List<object> AList { get; set; } = [];
 
     [JsonProperty("b")]
-    public List<object> BList { get; set; }
+    public List<object> BList { get; set; } = [];
 
     [JsonProperty("A")]
-    public List<A> A { get; set; }
+    public List<A> A { get; set; } = [];
 
     [JsonProperty("B")]
-    public List<B> B { get; set; }
+    public List<B> B { get; set; } = [];
 
     [JsonProperty("c")]
-    public List<C> C { get; set; }
+    public List<C> C { get; set; } = [];
 
     [JsonProperty("d")]
-    public List<D> D { get; set; }
+    public List<D> D { get; set; } = [];
 }
 
 public class Weighted
 {
     [JsonProperty("from")]
-    public List<string> From { get; set; }
+    public List<string> From { get; set; } = [];
 
     [JsonProperty("weights")]
-    public List<int?> Weights { get; set; }
+    public List<int?> Weights { get; set; } = [];
 }

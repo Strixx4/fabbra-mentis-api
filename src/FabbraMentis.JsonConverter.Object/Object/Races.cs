@@ -92,15 +92,6 @@ public class Known
     public object _1 { get; set; } = null!;
 }
 
-public class OtherSource
-{
-    [JsonProperty("source")]
-    public string Source { get; set; } = string.Empty;
-
-    [JsonProperty("page")]
-    public int? Page { get; set; }
-}
-
 public class Overwrite
 {
     [JsonProperty("ability")]
