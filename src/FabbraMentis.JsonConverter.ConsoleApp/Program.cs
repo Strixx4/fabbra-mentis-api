@@ -8,15 +8,25 @@ Logger.LogStartProject("ConsoleApp");
 
 try
 {
-    // Item
-    Logger.LogStartOperation("Item deserialization");
+    // Item Base
+    Logger.LogStartOperation("Items Base deserialization");
 
     var json = File.ReadAllText(@"C:\Users\andre\Repo\fabbra-mentis-api\src\FabbraMentis.JsonConverter.ConsoleApp\json\items-base.json");
-    var items = JsonConvert.DeserializeObject<ItemPropertyRoot>(json);
+    var itemsBase = JsonConvert.DeserializeObject<ItemPropertyRoot>(json);
+
+    Logger.Log($"Items Base deserialized successfully: {itemsBase is not null}");
+    Logger.Log($"Deserialized {itemsBase?.Baseitem.Count} Base items");
+    Logger.LogEndOperation("Item Base deserialization");
+
+    // Items
+    Logger.LogStartOperation("Items deserialization");
+
+    json = File.ReadAllText(@"C:\Users\andre\Repo\fabbra-mentis-api\src\FabbraMentis.JsonConverter.ConsoleApp\json\items.json");
+    var items = JsonConvert.DeserializeObject<ItemsRoot>(json);
 
     Logger.Log($"Items deserialized successfully: {items is not null}");
-    Logger.Log($"Deserialized {items?.Baseitem.Count} Base items");
-    Logger.LogEndOperation("Item deserialization");
+    Logger.Log($"Deserialized {items?.Item.Count} Base items");
+    Logger.LogEndOperation("Items deserialization");
 
     // Races
     Logger.LogStartOperation("Races deserialization");

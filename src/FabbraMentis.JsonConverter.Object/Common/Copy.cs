@@ -18,25 +18,7 @@ public class Copy
 public class Mod
 {
     [JsonProperty("entries")]
-    public List<Entries> Entries { get; set; } = null!;
-}
-
-public class Entries
-{
-    [JsonProperty("mode")]
-    public string Mode { get; set; } = string.Empty;
-
-    [JsonProperty("replace")]
-    public object Replace { get; set; } = null!;
-
-    [JsonProperty("items")]
-    public object Items { get; set; } = null!;
-
-    [JsonProperty("names")]
-    public string Names { get; set; } = string.Empty;
-
-    [JsonProperty("entries")]
-    public List<object> EntryEntries { get; set; } = [];
+    public List<object> Entries { get; set; } = null!;
 }
 
 public class Items

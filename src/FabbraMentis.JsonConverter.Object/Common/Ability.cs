@@ -24,6 +24,9 @@ public class Ability
 
     [JsonProperty("con")]
     public int? Con { get; set; }
+
+    [JsonProperty("static")]
+    public Static? Static { get; set; }
 }
 
 public class Choose
